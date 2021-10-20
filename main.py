@@ -14,7 +14,7 @@ def main() -> None:
             cnt += 1
             if cnt > times:
                 break
-            print(f"================The {cnt} times.")
+            print(f"\n\033[7;35;40m================== The {cnt} times. =========================\033[0m\n")
             air.touch(pos)
             begin()
         putCard()
@@ -48,15 +48,15 @@ def putPartner() -> None:
 def putCard() -> None:
     print("&&&&&&&&&&&&")
     idx = randint(0, 3)
-    air.touch(cards[idx])
-    time.sleep(sslp)
+    air.touch(cards[idx], times=2)
+    #time.sleep(sslp)
     #air.touch((randint(field[0], field[2]), randint(field[1], field[3])))
-    air.touch(cards[idx])
+    #air.touch(cards[idx])
     time.sleep(sslp)
 
 
 cnt = int()
-times = 5
+times = 8
 
 # ugly bare data
 bslp = 22
